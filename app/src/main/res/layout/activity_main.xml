@@ -49,15 +49,18 @@
             android:textColor="@color/PrimaryBlue">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:background="@color/white"
                 android:hint="Enter your name"
                 android:textColor="@color/PrimaryBlue"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColorHint="@color/textGrey"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/letsGo"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="20dp"
