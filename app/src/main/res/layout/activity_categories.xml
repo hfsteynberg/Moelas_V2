@@ -102,6 +102,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/savingSkillsButton"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/PrimaryBlue"
@@ -143,6 +144,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/generalSkillsButton"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/PrimaryBlue"

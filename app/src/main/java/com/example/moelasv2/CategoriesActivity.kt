@@ -26,5 +26,17 @@ class CategoriesActivity : AppCompatActivity() {
             val Intent = Intent(this,TaxSkillsQuestionsActivity::class.java)
             startActivity(Intent)
         }
+
+        val generalSkillsNav = findViewById<CardView>(R.id.generalSkillsButton)
+        generalSkillsNav.setOnClickListener{
+            val Intent = Intent(this,GeneralSkillsQuestions::class.java)
+            startActivity(Intent)
+        }
+
+        val savingSkillsNav = findViewById<CardView>(R.id.savingSkillsButton)
+        savingSkillsNav.setOnClickListener{
+            val Intent = Intent(this,SavingSkillsQuestionsActivity::class.java)
+            startActivity(Intent)
+        }
     }
 }
