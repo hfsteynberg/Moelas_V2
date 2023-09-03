@@ -85,7 +85,7 @@
                     android:layout_gravity="left">
 
                     <RadioGroup
-                        android:id="@+id/rg_taxOptions"
+                        android:id="@+id/rgTaxOptions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
