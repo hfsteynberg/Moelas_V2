@@ -3,69 +3,69 @@ package models
 import com.example.moelasv2.R
 
 object constantsGeneralSkills {
-    var allQuestions = ArrayList<questionsGeneralSkills>()
+    var allQuestionsGeneral = ArrayList<questionsGeneralSkills>()
 
     fun getAllQuestions(){
 
-        val que1 =  questionsGeneralSkills(
+        val generalQue1 =  questionsGeneralSkills(
             1,
-            "Questions one content?",
+            "What is the purpose of a credit score in South Africa?",
             R.drawable.logo,
-            optionOne = "Answer One",
-            optionTwo = "Answer Two",
-            optionThree = "Answer Three",
-            correctAnswer = "Answer One"
+            optionOneGeneral = "To determine your eligibility for social benefits",
+            optionTwoGeneral = "To assess your ability to repay loans and credit",
+            optionThreeGeneral = "To calculate your retirement savings",
+            correctAnswerGeneral = "To assess your ability to repay loans and credit"
 
         )
 
-        val que2 = questionsGeneralSkills(
+        val generalQue2 = questionsGeneralSkills(
             2,
-            questionText = "Questions two content",
+            questionTextGeneral = "Which of the following best describes the concept of - compound interest - in South Africa?",
             R.drawable.logo,
-            optionOne = "Answer One",
-            optionTwo = "Answer Two",
-            optionThree = "Answer Three",
-            correctAnswer = "Answer Two"
+            optionOneGeneral = "The interest charged by a bank for an overdraft",
+            optionTwoGeneral = "Interest earned on both the initial amount and any accumulated interest",
+            optionThreeGeneral = "A government tax on investments",
+            correctAnswerGeneral = "Interest earned on both the initial amount and any accumulated interest"
         )
 
-        val que3 = questionsGeneralSkills(
+        val generalQue3 = questionsGeneralSkills(
             3,
-            questionText = "Questions three content",
+            questionTextGeneral = "In South Africa, what is the recommended practice for creating a budget?",
             R.drawable.logo,
-            optionOne = "Answer One",
-            optionTwo = "Answer Two",
-            optionThree = "Answer Three",
-            correctAnswer = "Answer Three"
+            optionOneGeneral = "Spend as much as you earn",
+            optionTwoGeneral = "Spend more than you earn to enjoy life",
+            optionThreeGeneral = "Spend less than you earn and allocate funds to different expenses",
+            correctAnswerGeneral = "Spend less than you earn and allocate funds to different expenses"
 
         )
 
-        val que4 = questionsGeneralSkills(
+        val generalQue4 = questionsGeneralSkills(
             4,
-            questionText = "Questions four content",
+            questionTextGeneral = "When should you start saving for retirement in South Africa?",
             R.drawable.logo,
-            optionOne = "Answer One",
-            optionTwo = "Answer Two",
-            optionThree = "Answer Three",
-            correctAnswer = "Answer One"
+            optionOneGeneral = "In your 60s",
+            optionTwoGeneral = "As soon as you start working",
+            optionThreeGeneral = "After paying off all your debts",
+            correctAnswerGeneral = "As soon as you start working"
 
         )
 
-        val que5 = questionsGeneralSkills(
+        val generalQue5 = questionsGeneralSkills(
             5,
-            questionText = "Questions five content",
+            questionTextGeneral = "What is the purpose of diversifying an investment portfolio in South Africa?",
             R.drawable.logo,
-            optionOne = "Answer One",
-            optionTwo = "Answer Two",
-            optionThree = "Answer Three",
-            correctAnswer = "Answer Two"
+            optionOneGeneral = "To concentrate all investments in one asset class",
+            optionTwoGeneral = "To reduce risk by spreading investments across different asset classes",
+            optionThreeGeneral = "To maximize short-term gains",
+            correctAnswerGeneral = "To reduce risk by spreading investments across different asset classes"
 
         )
 
-        allQuestions.add(que1)
-        allQuestions.add(que2)
-        allQuestions.add(que3)
-        allQuestions.add(que4)
-        allQuestions.add(que5)
+        allQuestionsGeneral.add(generalQue1)
+        allQuestionsGeneral.add(generalQue2)
+        allQuestionsGeneral.add(generalQue3)
+        allQuestionsGeneral.add(generalQue4)
+        allQuestionsGeneral.add(generalQue5)
 
     }
 }

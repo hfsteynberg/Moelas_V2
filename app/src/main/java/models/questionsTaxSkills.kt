@@ -2,10 +2,10 @@ package models
 
 data class questionsTaxSkills(
     val id: Int,
-    val questionText: String,
-    val icon: Int,
-    val optionOne: String,
-    val optionTwo: String,
-    val optionThree: String,
-    val correctAnswer: String
+    val questionTextTax: String,
+    val iconTax: Int,
+    val optionOneTax: String,
+    val optionTwoTax: String,
+    val optionThreeTax: String,
+    val correctAnswerTax: String
 )

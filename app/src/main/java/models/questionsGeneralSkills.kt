@@ -2,10 +2,10 @@ package models
 
 data class questionsGeneralSkills(
     val id: Int,
-    val questionText: String,
-    val icon: Int,
-    val optionOne: String,
-    val optionTwo: String,
-    val optionThree: String,
-    val correctAnswer: String
+    val questionTextGeneral: String,
+    val iconGeneral: Int,
+    val optionOneGeneral: String,
+    val optionTwoGeneral: String,
+    val optionThreeGeneral: String,
+    val correctAnswerGeneral: String
 )
