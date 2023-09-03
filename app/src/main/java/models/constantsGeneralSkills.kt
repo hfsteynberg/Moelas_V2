@@ -2,12 +2,12 @@ package models
 
 import com.example.moelasv2.R
 
-object constantsTaxSkills {
-    var allQuestions = ArrayList<questionsTaxSkills>()
+object constantsGeneralSkills {
+    var allQuestions = ArrayList<questionsGeneralSkills>()
 
     fun getAllQuestions(){
 
-        val que1 =  questionsTaxSkills(
+        val que1 =  questionsGeneralSkills(
             1,
             "Questions one content?",
             R.drawable.logo,
@@ -18,7 +18,7 @@ object constantsTaxSkills {
 
         )
 
-        val que2 = questionsTaxSkills(
+        val que2 = questionsGeneralSkills(
             2,
             questionText = "Questions two content",
             R.drawable.logo,
@@ -28,7 +28,7 @@ object constantsTaxSkills {
             correctAnswer = "Answer Two"
         )
 
-        val que3 = questionsTaxSkills(
+        val que3 = questionsGeneralSkills(
             3,
             questionText = "Questions three content",
             R.drawable.logo,
@@ -39,7 +39,7 @@ object constantsTaxSkills {
 
         )
 
-        val que4 = questionsTaxSkills(
+        val que4 = questionsGeneralSkills(
             4,
             questionText = "Questions four content",
             R.drawable.logo,
@@ -50,7 +50,7 @@ object constantsTaxSkills {
 
         )
 
-        val que5 = questionsTaxSkills(
+        val que5 = questionsGeneralSkills(
             5,
             questionText = "Questions five content",
             R.drawable.logo,

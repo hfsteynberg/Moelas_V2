@@ -11,9 +11,9 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tax_skills_questions)
 
-        //getAllQuestions()
-        //val listOfQuestions = allQuestions
+        getAllQuestions()
+        val listOfQuestions = allQuestions
 
-        //Log.d("AAA First questions :", listOfQuestions[0].questionText)
+        Log.d("AAA First questions :", listOfQuestions[0].questionText)
     }
 }

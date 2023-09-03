@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.example.moelasv2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
             if (Username != null) {
                 if(Username.isBlank()){
                     Log.d("AAA Invalid Username", "Please enter one")
+                    //message defining the error state when the username box isn't filled out
+                    Toast.makeText(this, "Please enter your name.", Toast.LENGTH_SHORT).show()
                 } else{
                     Log.d("AAA  Captured Username :",Username.toString())
 
