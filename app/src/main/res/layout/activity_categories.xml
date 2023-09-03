@@ -40,6 +40,7 @@
                 android:src="@drawable/logo" />
 
             <ImageView
+                android:id="@+id/settingsButton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:padding="10dp"

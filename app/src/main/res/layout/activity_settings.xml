@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="225dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:src="@drawable/close" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        tools:layout_editor_absoluteX="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearAllGameData"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+
+            android:background="@color/PrimaryBlue"
+            android:gravity="center"
+            android:text="Clear all scores"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:padding="10dp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:text="Moelas Version : V2.plenty of hours of sukkel 2023/09/03"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/PrimaryBlue"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/flag" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

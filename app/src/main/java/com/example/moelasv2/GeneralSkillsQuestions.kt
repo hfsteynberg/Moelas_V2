@@ -1,7 +1,10 @@
 package com.example.moelasv2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import com.example.moelasv2.databinding.ActivityGeneralSkillsQuestionsBinding
 import com.example.moelasv2.databinding.ActivityTaxSkillsQuestionsBinding
 import models.constantsGeneralSkills
@@ -28,5 +31,11 @@ class GeneralSkillsQuestions : AppCompatActivity() {
         binding.rgGeneralOptionThree.text = listOfQuestions[0].optionThreeGeneral
         binding.pbProgressGeneral.progress = listOfQuestions[0].id
         binding.pbProgressTextGeneral.text = "${listOfQuestions[0].id}/${listOfQuestions.count()}"
+
+        val finishNav = findViewById<Button>(R.id.nextQuestionGeneralButton)
+        finishNav.setOnClickListener{
+            val Intent = Intent(this,QuestionResultsActivity::class.java)
+            startActivity(Intent)
+        }
     }
 }

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MoelasV2"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuestionResultsActivity"
+            android:exported="false" />
+        <activity
             android:name=".GeneralSkillsQuestions"
             android:exported="false" />
         <activity

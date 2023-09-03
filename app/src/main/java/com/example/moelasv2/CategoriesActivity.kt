@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import com.example.moelasv2.databinding.ActivityCategoriesBinding
 import models.questionsTaxSkills
@@ -36,6 +37,12 @@ class CategoriesActivity : AppCompatActivity() {
         val savingSkillsNav = findViewById<CardView>(R.id.savingSkillsButton)
         savingSkillsNav.setOnClickListener{
             val Intent = Intent(this,SavingSkillsQuestionsActivity::class.java)
+            startActivity(Intent)
+        }
+
+        val settingsNav = findViewById<ImageView>(R.id.settingsButton)
+        settingsNav.setOnClickListener{
+            val Intent = Intent(this,SettingsActivity::class.java)
             startActivity(Intent)
         }
     }
