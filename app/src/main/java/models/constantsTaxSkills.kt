@@ -6,6 +6,7 @@ object constantsTaxSkills {
     var allQuestionsTax = ArrayList<questionsTaxSkills>()
 
     fun getAllQuestions(){
+    allQuestionsTax.clear()
 
         val taxQue1 =  questionsTaxSkills(
             1,

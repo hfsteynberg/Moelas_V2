@@ -22,11 +22,15 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
         val view=binding.root
         setContentView(view)
 
-        var userScore = 0
+        var userScore = 0 //TODO Get the user score the same way as the question number
 
         //val taxQuestionNumber = 1
         //previouse error section - keeping it seprate to diagnose - START
-        val taxQuestionNumber = intent.extras?.getInt("questionNumberTax")
+        var taxQuestionNumber = intent.extras?.getInt("questionNumberTax")
+        if(taxQuestionNumber == null){
+            taxQuestionNumber = 1
+        }
+        Log.d("AAA Question Numer",taxQuestionNumber.toString())
         //previouse error section - keeping it seprate to diagnose - END
 
 
@@ -73,18 +77,19 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
                     Log.d("AAA user score is what:", userScore.toString())
                 }
 
-
-
-                //previouse error section - keeping it seprate to diagnose - START
-                val intent = Intent(this,TaxSkillsQuestionsActivity::class.java)
-                if (taxQuestionNumber != null) {
-                    intent.putExtra("questionNumberTax", taxQuestionNumber + 1)
+                if(taxQuestionNumber > 5){
+                    //TODO navigate to result page(Remember to pass the score)
+                } else{
+                    //previouse error section - keeping it seprate to diagnose - START
+                    val intent = Intent(this,TaxSkillsQuestionsActivity::class.java)
+                    if (taxQuestionNumber != null) {
+                        intent.putExtra("questionNumberTax", taxQuestionNumber + 1)
+                    }
+                    //TODO pass userscore the same way as the question number
+                    //still fine up until here - if statement might change that
+                    startActivity(intent)
+                    //previouse error section - keeping it seprate to diagnose - END
                 }
-                //still fine up until here - if statement might change that
-                startActivity(intent)
-                //previouse error section - keeping it seprate to diagnose - END
-
-
 
                 //added after error not loading - END
                 finish()
