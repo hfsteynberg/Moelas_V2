@@ -6,6 +6,7 @@ object constantsSavingSkills {
     var allQuestionsSaving = ArrayList<questionsSavingSkills>()
 
     fun getAllQuestions(){
+        allQuestionsSaving.clear()
 
         val savingQue1 =  questionsSavingSkills(
             1,

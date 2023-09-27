@@ -6,6 +6,7 @@ object constantsGeneralSkills {
     var allQuestionsGeneral = ArrayList<questionsGeneralSkills>()
 
     fun getAllQuestions(){
+        allQuestionsGeneral.clear()
 
         val generalQue1 =  questionsGeneralSkills(
             1,

@@ -3,7 +3,10 @@ package com.example.moelasv2
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.example.moelasv2.databinding.ActivityGeneralSkillsQuestionsBinding
 import com.example.moelasv2.databinding.ActivityTaxSkillsQuestionsBinding
@@ -20,22 +23,93 @@ class GeneralSkillsQuestions : AppCompatActivity() {
         val view=binding.root
         setContentView(view)
 
-        constantsGeneralSkills.getAllQuestions()
+        var userScoreGeneral = intent.extras?.getInt("generalUserScore")
+        if(userScoreGeneral == null){
+            userScoreGeneral = 1
+        }
+        // Get the user score the same way as the question number
+
+        //val taxQuestionNumber = 1
+        //previouse error section - keeping it seprate to diagnose - START
+        var generalQuestionNumber = intent.extras?.getInt("questionNumberGeneral")
+        if(generalQuestionNumber == null){
+            generalQuestionNumber = 1
+        }
+        Log.d("AAA Question Number",generalQuestionNumber.toString())
+        //previouse error section - keeping it seprate to diagnose - END
+
+
+
+        //added after error not loading - START
+        if(generalQuestionNumber == 1) {
+            constantsGeneralSkills.getAllQuestions()
+        }
+        //added after error not loading - END
+
+
         val listOfQuestions = constantsGeneralSkills.allQuestionsGeneral
 
-        //Start of the actual backend of the transitions between questions and their validations
-        binding.generalQuestionTitle.text = "General Skills - Question ${listOfQuestions[0].id}"
-        binding.generalQuestionText.text = "" + listOfQuestions[0].questionTextGeneral
-        binding.rgGeneralOptionOne.text = "" + listOfQuestions[0].optionOneGeneral
-        binding.rgGeneralOptionTwo.text = listOfQuestions[0].optionTwoGeneral
-        binding.rgGeneralOptionThree.text = listOfQuestions[0].optionThreeGeneral
-        binding.pbProgressGeneral.progress = listOfQuestions[0].id
-        binding.pbProgressTextGeneral.text = "${listOfQuestions[0].id}/${listOfQuestions.count()}"
 
-        val finishNav = findViewById<Button>(R.id.nextQuestionGeneralButton)
-        finishNav.setOnClickListener{
-            val Intent = Intent(this,QuestionResultsActivity::class.java)
-            startActivity(Intent)
+        //redefining list of questions
+        //previouse error section - keeping it seprate to diagnose - START (Below is commented out because of the above error section
+        //val taxQuestionNumber: Int = 1
+        //previouse error section - keeping it seprate to diagnose - END
+
+
+
+        val generalCurrentQuestion = listOfQuestions[generalQuestionNumber!!-1]
+
+        //Start of the actual backend of the transitions between questions and their validations
+        binding.generalQuestionTitle.text = "Tax Skills - Question ${generalCurrentQuestion.id}"
+        binding.generalQuestionText.text = "" + generalCurrentQuestion.questionTextGeneral
+        binding.rgGeneralOptionOne.text = "" + generalCurrentQuestion.optionOneGeneral
+        binding.rgGeneralOptionTwo.text = generalCurrentQuestion.optionTwoGeneral
+        binding.rgGeneralOptionThree.text = generalCurrentQuestion.optionThreeGeneral
+        binding.pbProgressGeneral.progress = generalCurrentQuestion.id
+        binding.pbProgressTextGeneral.text = "${generalQuestionNumber}/${listOfQuestions.count()}"
+
+        binding.nextQuestionGeneralButton.setOnClickListener{
+            var selectedAnswerGeneral: Int = binding.rgGeneralOptions.checkedRadioButtonId  //answer selected
+            Log.d("AAA Selected ID:", selectedAnswerGeneral.toString())
+
+            if(selectedAnswerGeneral != -1){
+                var selectedAnswerValueGeneral = findViewById<RadioButton>(selectedAnswerGeneral)
+                Log.d("AAA selected answer", selectedAnswerValueGeneral.text.toString())
+
+                if(selectedAnswerValueGeneral.text == generalCurrentQuestion.correctAnswerGeneral){
+                    Log.d("AAA user score is what:", userScoreGeneral.toString())
+                }
+
+                if(generalQuestionNumber == 6){
+                    val finishNavGeneral = findViewById<Button>(R.id.nextQuestionGeneralButton)
+                    finishNavGeneral.setOnClickListener{
+                        val Intent = Intent(this,QuestionResultsActivity::class.java)
+                        startActivity(Intent)
+                    }
+                } else{
+                    //previouse error section - keeping it seprate to diagnose - START
+                    val intent = Intent(this,GeneralSkillsQuestions::class.java)
+                    if (generalQuestionNumber != null) {
+                        intent.putExtra("questionNumberGeneral", generalQuestionNumber + 1)
+                    }
+                    if(userScoreGeneral != null) {
+                        intent.putExtra("generalUserScore",userScoreGeneral +1)
+                    }
+                    // pass userscore the same way as the question number
+                    //still fine up until here - if statement might change that
+                    startActivity(intent)
+                    //previouse error section - keeping it seprate to diagnose - END
+                }
+
+                //added after error not loading - END
+                finish()
+                //added after error not loading - END
+
+
+            } else {
+                Toast.makeText(this, "Please add your answer", Toast.LENGTH_SHORT).show()
+            }
         }
+
     }
 }
