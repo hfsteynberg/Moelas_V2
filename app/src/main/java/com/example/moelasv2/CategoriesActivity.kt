@@ -42,8 +42,18 @@ class CategoriesActivity : AppCompatActivity() {
 
         val settingsNav = findViewById<ImageView>(R.id.settingsButton)
         settingsNav.setOnClickListener{
-            val Intent = Intent(this,SettingsActivity::class.java)
-            startActivity(Intent)
+            val intent = Intent(this,SettingsActivity::class.java)
+            startActivity(intent)
         }
+
+        var userScoreTax = intent.extras?.getInt("taxUserScore")
+        binding.UserScoreTextTax.text = userScoreTax.toString() + " out of 5"
+
+        var userScoreGeneral = intent.extras?.getInt("generalUserScore")
+        binding.UserScoreTextGeneral.text = userScoreGeneral.toString() + " out of 5"
+
+        var userScoreSavings = intent.extras?.getInt("savingUserScore")
+        binding.UserScoreTextSavings.text = userScoreSavings.toString() + " out of 5"
+
     }
 }

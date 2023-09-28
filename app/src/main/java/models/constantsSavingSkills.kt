@@ -47,7 +47,7 @@ object constantsSavingSkills {
             optionOneSaving = "Dining out more often",
             optionTwoSaving = "Buying in bulk",
             optionThreeSaving = "Office rent",
-            correctAnswerSaving = "Ignoring sales and discounts"
+            correctAnswerSaving = "Buying in bulk"
 
         )
 

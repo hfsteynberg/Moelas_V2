@@ -82,12 +82,11 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
                     Log.d("AAA user score is what:", userScoreTax.toString())
                 }
 
-                if(taxQuestionNumber > 5){
-                    val finishNavTax = findViewById<Button>(R.id.nextQuestionTaxButton)
-                    finishNavTax.setOnClickListener{
-                        val Intent = Intent(this,QuestionResultsActivity::class.java)
-                        startActivity(Intent)
-                    }
+                if(taxQuestionNumber == 5){
+                    val intent = Intent(this,QuestionResultsActivity::class.java)
+                    intent.putExtra("taxUserScore", userScoreTax)
+                    startActivity(intent)
+
                 } else{
                     //previouse error section - keeping it seprate to diagnose - START
                     val intent = Intent(this,TaxSkillsQuestionsActivity::class.java)

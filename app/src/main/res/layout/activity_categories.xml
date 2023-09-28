@@ -88,6 +88,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/UserScoreTextTax"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -130,6 +131,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/UserScoreTextSavings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -172,6 +174,7 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/UserScoreTextGeneral"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"

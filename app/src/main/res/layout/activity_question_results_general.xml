@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestionResultsActivity"
+    tools:context=".QuestionResultsActivityGeneral"
     android:background="@color/PrimaryBlue"
     android:padding="20dp">
 
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"/>
         <TextView
-            android:id="@+id/UserScoreText"
+            android:id="@+id/UserScoreTextGeneral"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="0 out of 5"
@@ -47,9 +47,6 @@
             android:textSize="25sp"
             android:padding="10dp"/>
 
-
-
-
-
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

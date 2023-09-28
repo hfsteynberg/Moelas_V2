@@ -80,12 +80,13 @@ class GeneralSkillsQuestions : AppCompatActivity() {
                     Log.d("AAA user score is what:", userScoreGeneral.toString())
                 }
 
-                if(generalQuestionNumber == 6){
-                    val finishNavGeneral = findViewById<Button>(R.id.nextQuestionGeneralButton)
-                    finishNavGeneral.setOnClickListener{
-                        val Intent = Intent(this,QuestionResultsActivity::class.java)
-                        startActivity(Intent)
-                    }
+                Log.d("AAA What number we are at", generalQuestionNumber.toString())
+
+                if(generalQuestionNumber == 5){
+                    val intent = Intent(this,QuestionResultsActivityGeneral::class.java)
+                    intent.putExtra("generalUserScore", userScoreGeneral)
+                    startActivity(intent)
+
                 } else{
                     //previouse error section - keeping it seprate to diagnose - START
                     val intent = Intent(this,GeneralSkillsQuestions::class.java)

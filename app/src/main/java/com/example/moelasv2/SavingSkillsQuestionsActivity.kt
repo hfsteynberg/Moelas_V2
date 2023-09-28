@@ -81,12 +81,11 @@ class SavingSkillsQuestionsActivity : AppCompatActivity() {
                     Log.d("AAA user score is what:", userScoreSaving.toString())
                 }
 
-                if(savingQuestionNumber > 5){
-                    val finishNavSaving = findViewById<Button>(R.id.nextQuestionSavingButton)
-                    finishNavSaving.setOnClickListener{
-                        val Intent = Intent(this,QuestionResultsActivity::class.java)
-                        startActivity(Intent)
-                    }
+                if(savingQuestionNumber == 5){
+                    val intent = Intent(this,QuestionResultsActivitySavings::class.java)
+                    intent.putExtra("savingUserScore", userScoreSaving)
+                    startActivity(intent)
+
                 } else{
                     //previouse error section - keeping it seprate to diagnose - START
                     val intent = Intent(this,SavingSkillsQuestionsActivity::class.java)
