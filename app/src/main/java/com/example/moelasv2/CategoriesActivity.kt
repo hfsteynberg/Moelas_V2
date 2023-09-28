@@ -24,20 +24,20 @@ class CategoriesActivity : AppCompatActivity() {
 
         val taxSkillsNav = findViewById<CardView>(R.id.taxSkillsButton)
         taxSkillsNav.setOnClickListener{
-            val Intent = Intent(this,TaxSkillsQuestionsActivity::class.java)
-            startActivity(Intent)
+            val intent = Intent(this,TaxSkillsQuestionsActivity::class.java)
+            startActivity(intent)
         }
 
         val generalSkillsNav = findViewById<CardView>(R.id.generalSkillsButton)
         generalSkillsNav.setOnClickListener{
-            val Intent = Intent(this,GeneralSkillsQuestions::class.java)
-            startActivity(Intent)
+            val intent = Intent(this,GeneralSkillsQuestions::class.java)
+            startActivity(intent)
         }
 
         val savingSkillsNav = findViewById<CardView>(R.id.savingSkillsButton)
         savingSkillsNav.setOnClickListener{
-            val Intent = Intent(this,SavingSkillsQuestionsActivity::class.java)
-            startActivity(Intent)
+            val intent = Intent(this,SavingSkillsQuestionsActivity::class.java)
+            startActivity(intent)
         }
 
         val settingsNav = findViewById<ImageView>(R.id.settingsButton)
