@@ -78,6 +78,7 @@ class SavingSkillsQuestionsActivity : AppCompatActivity() {
                 Log.d("AAA selected answer", selectedAnswerValueSaving.text.toString())
 
                 if(selectedAnswerValueSaving.text == savingCurrentQuestion.correctAnswerSaving){
+                    userScoreSaving = userScoreSaving!! +1
                     Log.d("AAA user score is what:", userScoreSaving.toString())
                 }
 
@@ -93,7 +94,7 @@ class SavingSkillsQuestionsActivity : AppCompatActivity() {
                         intent.putExtra("questionNumberSaving", savingQuestionNumber + 1)
                     }
                     if(userScoreSaving != null) {
-                        intent.putExtra("savingUserScore",userScoreSaving +1)
+                        intent.putExtra("savingUserScore",userScoreSaving)
                     }
                     // pass userscore the same way as the question number
                     //still fine up until here - if statement might change that

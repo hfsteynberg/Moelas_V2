@@ -16,7 +16,6 @@ class QuestionResultsActivityGeneral : AppCompatActivity() {
         setContentView(view)
 
         var userScoreGeneral = intent.extras?.getInt("generalUserScore")
-
         binding.UserScoreTextGeneral.text = userScoreGeneral.toString() + " out of 5"
 
         binding.backButton.setOnClickListener {

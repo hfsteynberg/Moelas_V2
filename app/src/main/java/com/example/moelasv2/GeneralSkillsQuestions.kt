@@ -77,6 +77,7 @@ class GeneralSkillsQuestions : AppCompatActivity() {
                 Log.d("AAA selected answer", selectedAnswerValueGeneral.text.toString())
 
                 if(selectedAnswerValueGeneral.text == generalCurrentQuestion.correctAnswerGeneral){
+                    userScoreGeneral = userScoreGeneral!! + 1
                     Log.d("AAA user score is what:", userScoreGeneral.toString())
                 }
 
@@ -94,7 +95,7 @@ class GeneralSkillsQuestions : AppCompatActivity() {
                         intent.putExtra("questionNumberGeneral", generalQuestionNumber + 1)
                     }
                     if(userScoreGeneral != null) {
-                        intent.putExtra("generalUserScore",userScoreGeneral +1)
+                        intent.putExtra("generalUserScore",userScoreGeneral)
                     }
                     // pass userscore the same way as the question number
                     //still fine up until here - if statement might change that

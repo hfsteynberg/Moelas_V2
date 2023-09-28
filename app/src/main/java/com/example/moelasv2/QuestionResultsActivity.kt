@@ -20,7 +20,6 @@ class QuestionResultsActivity : AppCompatActivity() {
         setContentView(view)
 
         var userScoreTax = intent.extras?.getInt("taxUserScore")
-
         binding.UserScoreText.text = userScoreTax.toString() + " out of 5"
 
         binding.backButton.setOnClickListener {

@@ -79,6 +79,7 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
                 Log.d("AAA selected answer", selectedAnswerValueTax.text.toString())
 
                 if(selectedAnswerValueTax.text == taxCurrentQuestion.correctAnswerTax){
+                    userScoreTax = userScoreTax!! +1
                     Log.d("AAA user score is what:", userScoreTax.toString())
                 }
 
@@ -94,7 +95,7 @@ class TaxSkillsQuestionsActivity : AppCompatActivity() {
                         intent.putExtra("questionNumberTax", taxQuestionNumber + 1)
                     }
                     if(userScoreTax != null) {
-                        intent.putExtra("taxUserScore",userScoreTax +1)
+                        intent.putExtra("taxUserScore",userScoreTax)
                     }
                     // pass userscore the same way as the question number
                     //still fine up until here - if statement might change that

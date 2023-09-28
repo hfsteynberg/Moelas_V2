@@ -16,7 +16,6 @@ class QuestionResultsActivitySavings : AppCompatActivity() {
         setContentView(view)
 
         var userScoreSavings = intent.extras?.getInt("savingUserScore")
-
         binding.UserScoreTextSavings.text = userScoreSavings.toString() + " out of 5"
 
         binding.backButton.setOnClickListener {
